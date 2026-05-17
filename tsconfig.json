@@ -1,0 +1,35 @@
+import { defineSchema, defineTable } from "convex/server";
+import { v } from "convex/values";
+import { authTables } from "@convex-dev/auth/server";
+
+const applicationTables = {
+  conversations: defineTable({
+    userId: v.id("users"),
+    mode: v.union(v.literal("vision"), v.literal("hearing"), v.literal("speech")),
+    message: v.string(),
+    response: v.optional(v.string()),
+    timestamp: v.number(),
+  }).index("by_user_and_mode", ["userId", "mode"]),
+  
+  userPreferences: defineTable({
+    userId: v.id("users"),
+    preferredMode: v.union(v.literal("vision"), v.literal("hearing"), v.literal("speech")),
+    voiceSpeed: v.number(), // 0.5 to 2.0
+    voicePitch: v.number(), // 0.5 to 2.0
+    fontSize: v.union(v.literal("small"), v.literal("medium"), v.literal("large"), v.literal("extra-large")),
+    highContrast: v.boolean(),
+  }).index("by_user", ["userId"]),
+
+  liveTranscriptions: defineTable({
+    userId: v.id("users"),
+    text: v.string(),
+    confidence: v.number(),
+    timestamp: v.number(),
+    isComplete: v.boolean(),
+  }).index("by_user_and_timestamp", ["userId", "timestamp"]),
+};
+
+export default defineSchema({
+  ...authTables,
+  ...applicationTables,
+});
