@@ -56,17 +56,13 @@ AssistPlus is designed primarily for:
 
 ## 📸 Project Screenshots
 
-### Home Page
-![Home Page](screenshots/home.png)
+| Login Page | Vision Mode |
+|------------|-------------|
+| ![](./screenshots/Login.png) | ![](./screenshots/vision-mode.png) |
 
-### Vision Mode
-![Vision Mode](screenshots/vision-mode.png)
-
-### Hearing Mode
-![Hearing Mode](screenshots/hearing-mode.png)
-
-### Speech Mode
-![Speech Mode](screenshots/speech-mode.png)
+| Hearing Mode | Speech Mode |
+|--------------|-------------|
+| ![](./screenshots/hearing-mode.png) | ![](./screenshots/speech-mode.png) |
 
 ## 🚀 Purpose
 
