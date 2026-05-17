@@ -54,6 +54,20 @@ AssistPlus is designed primarily for:
 ### Platform
 - Web Application
 
+## 📸 Project Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Vision Mode
+![Vision Mode](screenshots/vision-mode.png)
+
+### Hearing Mode
+![Hearing Mode](screenshots/hearing-mode.png)
+
+### Speech Mode
+![Speech Mode](screenshots/speech-mode.png)
+
 ## 🚀 Purpose
 
 The goal of AssistPlus is to provide an inclusive and accessible digital experience by combining multiple accessibility features into one platform, helping users communicate and interact more independently.
